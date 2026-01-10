@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuietHelp — Authority Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css\login.css">
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar-container">
+    <div class="navbar-wrapper">
+      <!-- Logo / Brand -->
+      <div class="navbar-logo">
+        QuietHelp
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <div class="navbar-hamburger" id="hamburger">
+        <span class="navbar-bar"></span>
+        <span class="navbar-bar"></span>
+        <span class="navbar-bar"></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-menu" id="navMenu">
+        <li class="navbar-item">
+          <a href="index.html" class="navbar-link">Home</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="report.html" class="navbar-link">Share Safely</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="support.html" class="navbar-link">Support & Guidance</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="ai-analysis.html" class="navbar-link">AI Insights</a>
+        </li>
+
+        <!-- Authority Login Icon -->
+        <li class="navbar-item">
+          <a href="authority-login.html" class="navbar-icon-link" title="Authority Login">🔐</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<br><br>
+  <div class="authority_container">
+    <div class="authority_icon"></div>
+    
+    <div class="authority_title">Authority Access</div>
+    <div class="authority_subtitle">QuietHelp — Demo Login</div>
+
+    <div class="authority_warning">
+      This login is for <strong>demo purposes only</strong>.<br>
+      Access is restricted to authorized institutions and administrators.
+    </div>
+
+    <form id="authorityLoginForm">
+      <div class="authority_form_group">
+        <label for="authority_email">Email</label>
+        <input
+          type="email"
+          id="authority_email"
+          placeholder="admin@quiethelp.demo"
+          required
+        />
+      </div>
+
+      <div class="authority_form_group">
+        <label for="authority_password">Password</label>
+        <input
+          type="password"
+          id="authority_password"
+          placeholder="demo123"
+          required
+        />
+      </div>
+
+      <button type="submit" class="authority_button" id="loginButton">
+        Login to Dashboard
+      </button>
+    </form>
+
+    <div id="authority_error" class="authority_error"></div>
+
+    <div class="authority_footer">
+      <strong>QuietHelp</strong> does not expose user identities or raw reports.<br>
+      This dashboard is intended for awareness and prevention only.
+    </div>
+  </div>
+
+  <script src="js\login.js">
+    
+  </script>
+
+</body>
+</html>

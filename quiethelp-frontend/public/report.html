@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuietHelp – Report a Complaint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href = "css\style_report.css">
+
+</head>
+
+<body>
+ <!-- NAVBAR -->
+  <nav class="navbar-container">
+    <div class="navbar-wrapper">
+      <!-- Logo / Brand -->
+      <div class="navbar-logo">
+        QuietHelp
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <div class="navbar-hamburger" id="hamburger">
+        <span class="navbar-bar"></span>
+        <span class="navbar-bar"></span>
+        <span class="navbar-bar"></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-menu" id="navMenu">
+        <li class="navbar-item">
+          <a href="index.html" class="navbar-link">Home</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="report.html" class="navbar-link">Share Safely</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="support.html" class="navbar-link">Support & Guidance</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="ai-analysis.html" class="navbar-link">AI Insights</a>
+        </li>
+
+        <!-- Authority Login Icon -->
+        <li class="navbar-item">
+          <a href="authority-login.html" class="navbar-icon-link" title="Authority Login">🔐</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Report a Complaint</h1>
+
+    <p>
+      You can report an incident anonymously.<br />
+      Share only what you feel comfortable sharing.
+    </p>
+
+    <form id="complaintForm">
+
+      <label>Describe the incident *</label>
+      <textarea id="description" required></textarea>
+
+      <label>Incident Type</label>
+      <select id="type">
+        <option>Harassment</option>
+        <option>Stalking</option>
+        <option>Verbal Abuse</option>
+        <option>Online Abuse</option>
+        <option>Other</option>
+      </select>
+
+      <label>Location (optional)</label>
+      <input id="location" type="text" />
+
+      <label>When did it happen? (optional)</label>
+      <input id="time" type="datetime-local" />
+
+      <label>How should this report be used?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="visibility" value="awareness" checked /> Awareness only</label>
+        <label><input type="radio" name="visibility" value="authority" /> Share with authorities (demo)</label>
+      </div>
+
+      <button type="submit">Submit Anonymously</button>
+    </form>
+
+    <div id="status"></div>
+
+    <!-- ENHANCED AI GUIDANCE -->
+    <div id="ai-guidance" class="ai-guidance hidden"></div>
+  </div>
+
+  <!-- SUCCESS POPUP -->
+  <div id="successPopup" class="success-popup-overlay">
+    <div class="success-popup">
+      <div class="success-icon-container">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+      </div>
+      
+      <h2>Report Submitted Successfully!</h2>
+      
+      <p>Your report has been received and recorded anonymously.</p>
+      
+      <div class="highlight-text">
+        🔒 Your identity is completely protected
+      </div>
+      
+      <div class="privacy-message">
+        <p>
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+          </svg>
+          No personal information has been collected. You can safely close this window without worrying about your identity being revealed.
+        </p>
+      </div>
+      
+      <button class="popup-close-button" onclick="closeSuccessPopup()">
+        Got it, thanks!
+      </button>
+    </div>
+  </div>
+ <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Section -->
+        <div>
+          <div class="footer-brand">QuietHelp</div>
+          <p class="footer-tagline">
+            A safe, anonymous space to share, heal, and find support. 
+            Breaking the silence, one story at a time.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-link" title="Facebook">📘</a>
+            <a href="#" class="footer-social-link" title="Twitter">🐦</a>
+            <a href="#" class="footer-social-link" title="Instagram">📷</a>
+            <a href="#" class="footer-social-link" title="Email">✉️</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-section-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="#heroSection" class="footer-link">Home</a></li>
+            <li><a href="report.html" class="footer-link">Share Safely</a></li>
+            <li><a href="#emergencyLinksSection" class="footer-link">Emergency Helplines</a></li>
+            <li><a href="#howWeWorkSection" class="footer-link">How We Work</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <div class="footer-section-title">Resources</div>
+          <ul class="footer-links-list">
+            <li><a href="support.html" class="footer-link">Know Your Rights</a></li>
+            <li><a href="support.html" class="footer-link">Safety Tips</a></li>
+            <li><a href="support.html" class="footer-link">Support Services</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Legal -->
+        <div>
+          <div class="footer-section-title">Legal & Contact</div>
+          <ul class="footer-links-list">
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#disclaimerSection" class="footer-link">Disclaimer</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 QuietHelp. All rights reserved.
+        </p>
+        <p class="footer-made-with">
+          Made with <span class="footer-heart">♥</span> for a safer community
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="js\script_report.js"></script>
+    
+  
+
+</body>
+</html>

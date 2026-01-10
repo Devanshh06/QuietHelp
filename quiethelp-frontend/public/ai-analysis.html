@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QuietHelp – AI Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+ <link rel="stylesheet" href="css\style_ai.css">
+   <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+  <div class="floating-shape shape-1"></div>
+  <div class="floating-shape shape-2"></div>
+
+  <!-- NAVBAR -->
+ <!-- NAVBAR -->
+  <nav class="navbar-container">
+    <div class="navbar-wrapper">
+      <!-- Logo / Brand -->
+      <div class="navbar-logo">
+        QuietHelp
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <div class="navbar-hamburger" id="hamburger">
+        <span class="navbar-bar"></span>
+        <span class="navbar-bar"></span>
+        <span class="navbar-bar"></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="navbar-menu" id="navMenu">
+        <li class="navbar-item">
+          <a href="index.html" class="navbar-link">Home</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="report.html" class="navbar-link">Share Safely</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="support.html" class="navbar-link">Support & Guidance</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="ai-analysis.html" class="navbar-link">AI Insights</a>
+        </li>
+
+        <!-- Authority Login Icon -->
+        <li class="navbar-item">
+          <a href="authority-login.html" class="navbar-icon-link" title="Authority Login">🔐</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="main-content">
+    <h1>Community Safety – AI Analysis</h1>
+    <center><span class="demo-badge">Demo Version</span></center>
+
+    <!-- OVERVIEW STATS -->
+    <div class="grid">
+      <div class="card">
+        <h3>Total Reports</h3>
+        <div id="totalReports" class="stat">—</div>
+      </div>
+
+      <div class="card">
+        <h3>Most Common Incident</h3>
+        <div id="topIncident" class="stat">—</div>
+      </div>
+    </div>
+
+    <!-- INCIDENT TYPE PIE CHART -->
+    <div class="card">
+      <h3>Incident Type Distribution</h3>
+      <div class="chart-wrapper">
+        <canvas id="typeChart"></canvas>
+      </div>
+    </div>
+
+    <!-- TIME WISE BAR CHART -->
+    <div class="card">
+      <h3>Reports by Time of Day</h3>
+      <canvas id="timeChart"></canvas>
+    </div>
+
+    <!-- COMMUNITY MAP -->
+    <div class="card map-container">
+      <div class="map-header">
+        <h3>Community Safety Hotspot Map (Demo)</h3>
+        
+        <div class="map-info-grid">
+          <div class="map-info-item">
+            <strong>🎯 Purpose</strong>
+            <span>Identify high-risk areas for community awareness</span>
+          </div>
+          <div class="map-info-item">
+            <strong>📍 Location</strong>
+            <span>Nashik City, Maharashtra</span>
+          </div>
+          <div class="map-info-item">
+            <strong>🔒 Privacy Level</strong>
+            <span>Aggregated & Anonymized Data</span>
+          </div>
+          <div class="map-info-item">
+            <strong>⚠️ Demo Status</strong>
+            <span>Simulated data for visualization</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="map-legend">
+        <h4>Understanding the Map</h4>
+        <div class="legend-items">
+          <div class="legend-item">
+            <div class="legend-color high"></div>
+            <span>High Activity Zone (Multiple reports)</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color medium"></div>
+            <span>Moderate Activity Zone</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color low"></div>
+            <span>Low Activity Zone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-notice">
+        <p>
+          <strong>🔐 Privacy & Security:</strong> This demonstration map displays aggregated data from multiple reports to identify patterns and hotspots. 
+          Individual incident locations are never pinpointed. All data is anonymized to protect reporter identity. 
+          The circles represent general areas with heightened activity, not exact locations. This visualization is for 
+          community awareness and prevention planning only.
+        </p>
+      </div>
+    </div>
+
+    <p class="note" style="text-align: center; margin-top: 30px; padding: 16px; background: rgba(255,255,255,0.7); border-radius: 12px;">
+      📊 All data shown is anonymized and aggregated for awareness and prevention purposes. 
+      QuietHelp never exposes individual reports, identities, or exact locations.
+    </p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">QuietHelp</div>
+          <p class="footer-tagline">
+            A safe, anonymous space to share, heal, and find support. 
+            Breaking the silence, one story at a time.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-link" title="Facebook">📘</a>
+            <a href="#" class="footer-social-link" title="Twitter">🐦</a>
+            <a href="#" class="footer-social-link" title="Instagram">📷</a>
+            <a href="#" class="footer-social-link" title="Email">✉️</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-section-title">Quick Links</div>
+          <ul class="footer-links-list">
+            <li><a href="#heroSection" class="footer-link">Home</a></li>
+            <li><a href="report.html" class="footer-link">Share Safely</a></li>
+            <li><a href="#emergencyLinksSection" class="footer-link">Emergency Helplines</a></li>
+            <li><a href="#howWeWorkSection" class="footer-link">How We Work</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-section-title">Resources</div>
+          <ul class="footer-links-list">
+            <li><a href="support.html" class="footer-link">Know Your Rights</a></li>
+            <li><a href="support.html" class="footer-link">Safety Tips</a></li>
+            <li><a href="support.html" class="footer-link">Support Services</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-section-title">Legal & Contact</div>
+          <ul class="footer-links-list">
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#disclaimerSection" class="footer-link">Disclaimer</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 QuietHelp. All rights reserved.
+        </p>
+        <p class="footer-made-with">
+          Made with <span class="footer-heart">♥</span> for a safer community
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="js\script_ai.js"></script>
+
+</body>
+</html>
