@@ -9,6 +9,8 @@ The project was developed as part of the **“Frontend Development using AI 2026
 ## 🌐 Live Project
 Frontend Deployment:  
 https://quiethelp0.web.app/
+## Youtube video link
+https://youtu.be/c4iXtJoFMm0
 
 ---
 
