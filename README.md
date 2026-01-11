@@ -59,6 +59,31 @@ The platform is intended as a **support and insight tool**, not a legal enforcem
 - Static map-based visualization (demo data only)
 
 ---
+## Tech Stack
+
+### Frontend
+- HTML5 – Page structure and semantic layout
+- CSS3 – Responsive styling and UI design
+- JavaScript (ES6) – Client-side logic and API integration
+
+### Backend
+- Node.js – Server-side runtime environment
+- Express.js – REST API development and routing
+
+### AI Integration
+- Google Gemini API – AI-powered incident analysis and classification
+
+### Database & Storage
+- Supabase – Secure data storage with restricted access policies
+
+### Deployment & Hosting
+- Firebase Hosting – Frontend deployment
+- Render – Backend API deployment
+
+### Security & Configuration
+- Environment variables (`.env`) – Secure management of API keys
+- CORS – Controlled frontend–backend communication
+
 
 ## 🏫 Primary Use Cases
 
