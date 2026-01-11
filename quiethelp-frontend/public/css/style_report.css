@@ -809,3 +809,12 @@
       margin: 4px 0;
       transition: 0.3s;
     }
+    
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+      }
+      
+      .navbar-hamburger {
+        display: flex;
+      }
